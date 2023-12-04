@@ -6,7 +6,7 @@ const books = require('./data');
 
 app.use(cors());
 
-app.get('/books', (req, res) => {
+app.get('/api/books', (req, res) => {
   res.json(books);
 });
 
