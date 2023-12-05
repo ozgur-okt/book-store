@@ -1,0 +1,27 @@
+// Cart.module.scss
+.cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .cartItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  
+    .bookTitle {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    
+    .bookPrice {
+      color: #888;
+    }
+  }
+}
+
+
+

@@ -1,0 +1,19 @@
+// Navbar.module.scss
+.navbar {
+  display: flex;
+  //justify-content: flex-start;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ccc;
+
+  .link {
+    color: #333;
+    text-decoration: none;
+  
+    &:hover {
+      color: #007bff;
+    }
+  }
+
+}
+
