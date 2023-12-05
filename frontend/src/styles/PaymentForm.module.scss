@@ -1,0 +1,19 @@
+.paymentForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+
+  input {
+    margin-bottom: 10px;
+  }
+
+  button {
+    margin-top: 20px;
+  }
+}

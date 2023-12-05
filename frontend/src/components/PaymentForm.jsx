@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Cards from 'react-credit-cards-2';
 import 'react-credit-cards-2/dist/lib/styles.scss';
+import styles from '../styles/PaymentForm.module.scss';
 
 const PaymentForm = () => {
   const [state, setState] = useState({
@@ -21,8 +22,15 @@ const PaymentForm = () => {
     setState((prev) => ({ ...prev, focus: evt.target.name }));
   }
 
+  const isValid = () => {
+    return state.number.length > 0 &&
+      state.name.length > 0 &&
+      state.expiry.length > 0 &&
+      state.cvc.length > 0;
+  };
+
   return (
-    <div>
+    <div className={styles.paymentForm}>
       <Cards
         number={state.number}
         expiry={state.expiry}
@@ -30,7 +38,7 @@ const PaymentForm = () => {
         name={state.name}
         focused={state.focus}
       />
-      <form>
+      <form className={styles.form}>
         <input
           type="number"
           name="number"
@@ -63,7 +71,7 @@ const PaymentForm = () => {
           onChange={handleInputChange}
           onFocus={handleInputFocus}
         />
-        <button type="submit">Submit</button>
+        <button type="submit" disabled={!isValid()}>Submit</button>
       </form>
     </div>
   );
