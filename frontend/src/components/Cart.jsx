@@ -18,6 +18,14 @@ function Cart() {
 
   const totalPrice = cart.reduce((total, item) => total + item.book.price * item.count, 0);
 
+  if (!cart.length) {
+    return (
+      <div className={styles.cart}>
+        <h2>Your cart is empty</h2>
+      </div>
+    );
+  }
+
   return (
     <div className={styles.cart}>
       {cart.map(item => (
@@ -32,6 +40,7 @@ function Cart() {
         </div>
       ))}
       <h2>Total: ${totalPrice.toFixed(2)}</h2>
+      <button disabled={totalPrice === 0}>Checkout</button>
     </div>
   );
 }
