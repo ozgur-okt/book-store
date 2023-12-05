@@ -4,7 +4,6 @@ import BookList from './components/BookList';
 import Navbar from './components/Navbar';
 import Cart from './components/Cart';
 
-
 function App() {
   return (
     <Router>
