@@ -1,4 +1,4 @@
-import { ADD_TO_CART, FETCH_BOOK, FETCH_BOOKS, REMOVE_FROM_CART } from './actions';
+import { ADD_TO_CART, CLEAR_CART, FETCH_BOOK, FETCH_BOOKS, REMOVE_FROM_CART } from './actions';
 
 const initialState = {
   books: [],
@@ -50,6 +50,11 @@ export const bookReducer = (state = initialState, action) => {
 
       return { ...state, cart: updatedCart };
     }
+    case CLEAR_CART:
+      return {
+        ...state,
+        cart: []
+      };
     default:
       return state;
   }

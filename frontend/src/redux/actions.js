@@ -2,6 +2,7 @@ export const FETCH_BOOKS = 'FETCH_BOOKS';
 export const FETCH_BOOK = 'FETCH_BOOK';
 export const ADD_TO_CART = 'ADD_TO_CART';
 export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
+export const CLEAR_CART = 'CLEAR_CART';
 
 export const fetchBooks = () => async dispatch => {
   dispatch({ type: FETCH_BOOKS, status: 'loading' });
@@ -37,4 +38,8 @@ export const addToCart = (book) => ({
 export const removeFromCart = (bookId) => ({
   type: REMOVE_FROM_CART,
   payload: bookId
+});
+
+export const clearCart = () => ({
+  type: CLEAR_CART
 });

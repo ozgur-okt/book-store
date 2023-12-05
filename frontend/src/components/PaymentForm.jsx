@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import Cards from 'react-credit-cards-2';
 import 'react-credit-cards-2/dist/lib/styles.scss';
 import styles from '../styles/PaymentForm.module.scss';
+import { clearCart } from '../redux/actions';
 
 const PaymentForm = () => {
   const [state, setState] = useState({
@@ -12,9 +14,16 @@ const PaymentForm = () => {
     focus: '',
   });
 
+  const dispatch = useDispatch();
+
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+    dispatch(clearCart());
+  };
+
   const handleInputChange = (evt) => {
     const { name, value } = evt.target;
-    
+
     setState((prev) => ({ ...prev, [name]: value }));
   }
 
@@ -38,7 +47,7 @@ const PaymentForm = () => {
         name={state.name}
         focused={state.focus}
       />
-      <form className={styles.form}>
+      <form className={styles.form} onSubmit={handleSubmit}>
         <input
           type="number"
           name="number"
