@@ -1,20 +1,16 @@
-import React, { useEffect } from 'react';
-import { Provider, useDispatch } from 'react-redux';
-import store from './redux/store';
-import { fetchBooks } from './redux/actions';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import BookDetails from './components/BookDetails';
+import BookList from './components/BookList';
+
 
 function App() {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchBooks());
-  }, [dispatch]);
-
   return (
-
-      <div>
-        {/* Your components here */}
-      </div>
+    <Router>
+      <Routes>
+        <Route path="/book/:id" element={<BookDetails />} />
+        <Route path="/" element={<BookList />} />
+      </Routes>
+    </Router>
   );
 }
 

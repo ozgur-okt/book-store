@@ -1,0 +1,37 @@
+.bookList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  padding: 4rem 0;
+  justify-content: center;
+}
+
+.bookCard {
+  //margin: 20px;
+  position: relative;
+  width: 300px;
+  border: 1px dashed red;
+
+  .bookImage {
+    height: 300px;
+    width: 300px;
+  }
+
+  .bookTitle {
+    font-size: 1.2em;
+    font-weight: bold;
+    overflow: hidden;
+  }
+
+  .bookAuthor,
+  .bookPrice {
+    font-size: 1em;
+  }
+
+  .cartBtn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    // other styles...
+  }
+}
