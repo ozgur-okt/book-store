@@ -1,26 +1,120 @@
+$color-blue: #007bff;
+
 .cart {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 0 10rem 0;
+
+  .empty {
+    color: $color-blue;
+  }
+
 
   .cartItem {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 50%;
     padding: 10px;
+    color: $color-blue;
     border-bottom: 1px solid #ccc;
-  
+
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+
     .bookTitle {
+      display: flex;
+      align-items: center;
+      width: 15rem;
+
       font-size: 18px;
       font-weight: bold;
     }
-    
+
+    .bookAuthor {
+      width: 10rem;
+
+    }
+
     .bookPrice {
-      color: #888;
+
+      //color: #888;
+    }
+
+    .count {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 6rem;
+
+
+      .plus,
+      .minus {
+        display: flex;
+        justify-content: center;
+        border: none;
+        color: white;
+        background-color: $color-blue;
+        font-size: 1.5rem;
+        cursor: pointer;
+        width: 2rem;
+      }
+
+      .minus {
+        border-radius: 1rem 0 0 1rem;
+        padding: 0 0 0.1rem 0;
+      }
+
+      .plus {
+        border-radius: 0 1rem 1rem 0;
+      }
+    }
+  }
+
+  h2 {
+    color: $color-blue;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 1rem;
+
+    .checkout {
+      margin: 1rem 0 5rem 0;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 1rem;
+      background-color: $color-blue;
+      color: white;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.04rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #0069d9;
+      }
+    }
+
+    .cancel {
+      margin: 1rem 0 5rem 0;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 1rem;
+      background-color: #dc3545;
+      color: white;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.04rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #c82333;
+      }
     }
   }
 }
-
-
-

@@ -1,28 +1,51 @@
 .bookDetails {
   display: flex;
-  flex-direction: column;
+  //flex-direction: column;
   align-items: center;
   margin: 20px;
+  height: 28vw;
 
   .bookImage {
-    height: 300px;
-    width: 200px;
+    //height: 40vw;
+    border-radius: 3px;
+    width: 40vw;
     object-fit: cover;
   }
 
-  .bookTitle {
-    font-size: 2em;
-    font-weight: bold;
-    margin-top: 20px;
-  }
+  .information {
+    //border: 1px dashed black;
+    padding: 0 0 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 28vw;
 
-  .bookAuthor {
-    font-size: 1.5em;
-    margin-top: 10px;
-  }
+    .bookTitle {
+      font-size: 2em;
+      font-weight: bold;
+      margin: 0;
+      //margin-top: 20px;
+    }
 
-  .bookPrice {
-    font-size: 1.2em;
-    margin-top: 10px;
+    .bookAuthor {
+      font-size: 1.5em;
+      margin: 0;
+      //margin-top: 10px;
+    }
+
+    .bookPrice {
+      font-size: 1.2em;
+      margin: 0;
+    }
+
+    .bookDescription {
+      //font-size: 1.2em;
+      margin: 0;
+    }
+
+    .pageCount {
+      //font-size: 1.2em;
+      margin: 0;
+    }
   }
 }

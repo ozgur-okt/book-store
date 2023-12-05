@@ -26,9 +26,13 @@ function BookDetails() {
   return (
     <div className={styles.bookDetails}>
       <img src={book.image} alt={book.title} className={styles.bookImage} />
-      <h2 className={styles.bookTitle}>{book.title}</h2>
-      <p className={styles.bookAuthor}>{book.author}</p>
-      <p className={styles.bookPrice}>${book.price}</p>
+      <div className={styles.information}>
+        <h2 className={styles.bookTitle}>{book.title}</h2>
+        <p className={styles.bookAuthor}>{book.author}</p>
+        <p className={styles.bookPrice}>$ <b>{book.price}</b></p>
+        <p className={styles.bookDescription}>{book.description}</p>
+        <p className={styles.pageCount}> Page count: {book.pageCount}</p>
+      </div>
     </div>
   );
 }

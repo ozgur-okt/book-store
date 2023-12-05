@@ -4,6 +4,8 @@ const books = [
     title: 'The Great Gatsby',
     author: 'F. Scott Fitzgerald',
     price: 15.99,
+    pageCount: 218,
+    description: 'The Great Gatsby is a 1925 novel by American writer F. Scott Fitzgerald. Set in the Jazz Age on Long Island, the novel depicts narrator Nick Carraway\'s interactions with mysterious millionaire Jay Gatsby and Gatsby\'s obsession to reunite with his former lover, Daisy Buchanan.',
     image: 'https://source.unsplash.com/featured/?gatsby',
   },
   {
@@ -11,6 +13,8 @@ const books = [
     title: 'To Kill a Mockingbird',
     author: 'Harper Lee',
     price: 12.99,
+    pageCount: 281,
+    description: 'To Kill a Mockingbird is a novel by Harper Lee published in 1960. Instantly successful, widely read in high schools and middle schools in the United States, it has become a classic of modern American literature, winning the Pulitzer Prize.',
     image: 'https://source.unsplash.com/featured/?mockingbird',
   },
   {
@@ -18,6 +22,8 @@ const books = [
     title: '1984',
     author: 'George Orwell',
     price: 10.99,
+    pageCount: 328,
+    description: 'Nineteen Eighty-Four: A Novel, often published as 1984, is a dystopian social science fiction novel by English novelist George Orwell. It was published on 8 June 1949 by Secker & Warburg as Orwell\'s ninth and final book completed in his lifetime.',
     image: 'https://source.unsplash.com/featured/?1984',
   },
   {
@@ -25,6 +31,8 @@ const books = [
     title: 'Pride and Prejudice',
     author: 'Jane Austen',
     price: 14.99,
+    pageCount: 279,
+    description: 'Pride and Prejudice is a romantic novel of manners written by Jane Austen in 1813. The novel follows the character development of Elizabeth Bennet, the dynamic protagonist of the book who learns about the repercussions of hasty judgments and eventually comes to appreciate the difference between superficial goodness and actual goodness.',
     image: 'https://source.unsplash.com/featured/?pride-prejudice',
   },
   {
@@ -32,6 +40,8 @@ const books = [
     title: 'The Catcher in the Rye',
     author: 'J.D. Salinger',
     price: 11.99,
+    pageCount: 234,
+    description: 'The Catcher in the Rye is a story by J. D. Salinger, partially published in serial form in 1945–1946 and as a novel in 1951. It was originally intended for adults but is often read by adolescents for its themes of angst, alienation, and as a critique on superficiality in society.',
     image: 'https://source.unsplash.com/featured/?catcher-rye',
   },
   {
@@ -39,6 +49,8 @@ const books = [
     title: 'One Hundred Years of Solitude',
     author: 'Gabriel García Márquez',
     price: 13.99,
+    pageCount: 417,
+    description: 'One Hundred Years of Solitude is a landmark 1967 novel by Colombian author Gabriel García Márquez that tells the multi-generational story of the Buendía family, whose patriarch, José Arcadio Buendía, founded the town of Macondo, a fictitious town in the country of Colombia.',
     image: 'https://source.unsplash.com/featured/?solitude',
   },
   {
@@ -46,6 +58,8 @@ const books = [
     title: 'The Hobbit',
     author: 'J.R.R. Tolkien',
     price: 16.99,
+    pageCount: 310,
+    description: 'The Hobbit, or There and Back Again is a children\'s fantasy novel by English author J. R. R. Tolkien. It was published on 21 September 1937 to wide critical acclaim, being nominated for the Carnegie Medal and awarded a prize from the New York Herald Tribune for best juvenile fiction.',
     image: 'https://source.unsplash.com/featured/?hobbit',
   },
   {
@@ -53,6 +67,8 @@ const books = [
     title: 'Brave New World',
     author: 'Aldous Huxley',
     price: 12.99,
+    pageCount: 311,
+    description: 'Brave New World is a dystopian social science fiction novel by English author Aldous Huxley, written in 1931 and published in 1932. Largely set in a futuristic World State, whose citizens are environmentally engineered into an intelligence-based social hierarchy, the novel anticipates huge scientific advancements in reproductive technology, sleep-learning, psychological manipulation and classical conditioning that are combined to make a dystopian society which is challenged by only a single individual: the story\'s protagonist.',
     image: 'https://source.unsplash.com/featured/?brave-new-world',
   },
   {
@@ -60,6 +76,8 @@ const books = [
     title: 'Moby-Dick',
     author: 'Herman Melville',
     price: 15.99,
+    pageCount: 345,
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?moby-dick',
   },
   {
@@ -67,6 +85,8 @@ const books = [
     title: 'The Odyssey',
     author: 'Homer',
     price: 14.99,
+    pageCount: 345,
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?odyssey',
   },
   {
@@ -74,6 +94,8 @@ const books = [
     title: 'The Lord of the Rings',
     author: 'J.R.R. Tolkien',
     price: 19.99,
+    pageCount: 186,
+    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?lord-of-the-rings',
   },
   {
@@ -81,6 +103,8 @@ const books = [
     title: 'Fahrenheit 451',
     author: 'Ray Bradbury',
     price: 11.99,
+    pageCount: 335,
+    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?fahrenheit-451',
   },
   {
@@ -88,6 +112,8 @@ const books = [
     title: 'The Chronicles of Narnia',
     author: 'C.S. Lewis',
     price: 17.99,
+    pageCount: 345,
+    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?narnia',
   },
   {
@@ -95,6 +121,8 @@ const books = [
     title: 'Frankenstein',
     author: 'Mary Shelley',
     price: 13.99,
+    pageCount: 345,
+    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?frankenstein',
   },
   {
@@ -102,6 +130,8 @@ const books = [
     title: 'The Color Purple',
     author: 'Alice Walker',
     price: 14.99,
+    pageCount: 562,
+    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?color-purple',
   },
   {
@@ -109,6 +139,8 @@ const books = [
     title: 'The Shining',
     author: 'Stephen King',
     price: 16.99,
+    pageCount: 562,
+    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?the-shining',
   },
   {
@@ -116,6 +148,8 @@ const books = [
     title: 'Sapiens: A Brief History of Humankind',
     author: 'Yuval Noah Harari',
     price: 18.99,
+    pageCount: 335,
+    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?sapiens',
   },
   {
@@ -123,6 +157,8 @@ const books = [
     title: 'Wuthering Heights',
     author: 'Emily Brontë',
     price: 12.99,
+    pageCount: 345,
+    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?wuthering-heights',
   },
   {
@@ -130,6 +166,8 @@ const books = [
     title: 'The Alchemist',
     author: 'Paulo Coelho',
     price: 15.99,
+    pageCount: 345,
+    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?alchemist',
   },
   {
@@ -137,6 +175,8 @@ const books = [
     title: 'The Hitchhiker\'s Guide to the Galaxy',
     author: 'Douglas Adams',
     price: 14.99,
+    pageCount: 562,
+    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?hitchhikers-guide',
   },
   {
@@ -144,6 +184,8 @@ const books = [
     title: 'The Road',
     author: 'Cormac McCarthy',
     price: 14.99,
+    pageCount: 562,
+    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?the-road',
   },
   {
@@ -151,6 +193,8 @@ const books = [
     title: 'The Handmaid\'s Tale',
     author: 'Margaret Atwood',
     price: 16.99,
+    pageCount: 120,
+    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?handmaids-tale',
   },
   {
@@ -158,6 +202,8 @@ const books = [
     title: 'The Stranger',
     author: 'Albert Camus',
     price: 12.99,
+    pageCount: 335,
+    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?the-stranger',
   },
   {
@@ -165,6 +211,8 @@ const books = [
     title: 'The Grapes of Wrath',
     author: 'John Steinbeck',
     price: 15.99,
+    pageCount: 345,
+    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?grapes-of-wrath',
   },
   {
@@ -172,6 +220,8 @@ const books = [
     title: 'The Count of Monte Cristo',
     author: 'Alexandre Dumas',
     price: 18.99,
+    pageCount: 120,
+    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?monte-cristo',
   },
   {
@@ -179,6 +229,8 @@ const books = [
     title: 'The Picture of Dorian Gray',
     author: 'Oscar Wilde',
     price: 13.99,
+    pageCount: 120,
+    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?dorian-gray',
   },
   {
@@ -186,6 +238,8 @@ const books = [
     title: 'A Tale of Two Cities',
     author: 'Charles Dickens',
     price: 14.99,
+    pageCount: 186,
+    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?tale-of-two-cities',
   },
   {
@@ -193,6 +247,8 @@ const books = [
     title: 'Crime and Punishment',
     author: 'Fyodor Dostoevsky',
     price: 17.99,
+    pageCount: 345,
+    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?crime-and-punishment',
   },
   {
@@ -200,6 +256,8 @@ const books = [
     title: 'Great Expectations',
     author: 'Charles Dickens',
     price: 15.99,
+    pageCount: 345,
+    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?great-expectations',
   },
   {
@@ -207,21 +265,9 @@ const books = [
     title: 'The Silent Patient',
     author: 'Alex Michaelides',
     price: 19.99,
+    pageCount: 186,
+    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?silent-patient',
-  },
-  {
-    id: 31,
-    title: 'The Book Thief',
-    author: 'Markus Zusak',
-    price: 16.99,
-    image: 'https://source.unsplash.com/featured/?book-thief',
-  },
-  {
-    id: 32,
-    title: 'The Martian',
-    author: 'Andy Weir',
-    price: 14.99,
-    image: 'https://source.unsplash.com/featured/?the-martian',
   },
 ];
 

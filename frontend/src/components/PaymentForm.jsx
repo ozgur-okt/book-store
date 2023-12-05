@@ -4,6 +4,7 @@ import Cards from 'react-credit-cards-2';
 import 'react-credit-cards-2/dist/lib/styles.scss';
 import styles from '../styles/PaymentForm.module.scss';
 import { clearCart } from '../redux/actions';
+import tick from '../assets/tick.svg';
 
 const PaymentForm = () => {
   const [state, setState] = useState({
@@ -12,6 +13,7 @@ const PaymentForm = () => {
     cvc: '',
     name: '',
     focus: '',
+    isSubmitted: false,
   });
 
   const dispatch = useDispatch();
@@ -19,11 +21,11 @@ const PaymentForm = () => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
     dispatch(clearCart());
+    setState((prev) => ({ ...prev, isSubmitted: true }));
   };
 
   const handleInputChange = (evt) => {
     const { name, value } = evt.target;
-
     setState((prev) => ({ ...prev, [name]: value }));
   }
 
@@ -37,6 +39,15 @@ const PaymentForm = () => {
       state.expiry.length > 0 &&
       state.cvc.length > 0;
   };
+
+  if (state.isSubmitted) {
+    return (
+      <div className={styles.success}>
+        <img src={tick} alt="tick" />
+        <p>Your payment is successful!</p>
+      </div>
+    )
+  }
 
   return (
     <div className={styles.paymentForm}>
@@ -80,7 +91,7 @@ const PaymentForm = () => {
           onChange={handleInputChange}
           onFocus={handleInputFocus}
         />
-        <button type="submit" disabled={!isValid()}>Submit</button>
+        <button className={!isValid() ? styles.disabled : styles.submit} type="submit" disabled={!isValid()}>Submit</button>
       </form>
     </div>
   );
