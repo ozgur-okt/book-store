@@ -209,6 +209,20 @@ const books = [
     price: 19.99,
     image: 'https://source.unsplash.com/featured/?silent-patient',
   },
+  {
+    id: 31,
+    title: 'The Book Thief',
+    author: 'Markus Zusak',
+    price: 16.99,
+    image: 'https://source.unsplash.com/featured/?book-thief',
+  },
+  {
+    id: 32,
+    title: 'The Martian',
+    author: 'Andy Weir',
+    price: 14.99,
+    image: 'https://source.unsplash.com/featured/?the-martian',
+  },
 ];
 
 module.exports = books;
