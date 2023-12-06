@@ -26,61 +26,7 @@ $color-blue: #007bff;
     padding: 4rem 0;
     justify-content: center;
 
-    .bookCard {
-      //margin: 20px;
-      position: relative;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      width: 300px;
-      padding: 0.5rem;
-      transition: all 0.3s ease-in-out;
-      //height: 400px;
-      //border: 1px dashed red;
-      border-radius: 5px;
-
-      &:hover {
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        scale: 1.02
-      }
-
-      .link {
-        text-decoration: none;
-        color: black;
-
-
-        .bookImage {
-          height: 300px;
-          width: 300px;
-        }
-
-        .bookTitle {
-          font-size: 1.2em;
-          font-weight: bold;
-          overflow: hidden;
-        }
-
-        .bookAuthor {
-          font-size: 1em;
-        }
-
-        .bookPrice {
-          margin: 0;
-          font-size: 1.3em;
-          font-weight: 400;
-          position: absolute;
-          bottom: 0.6rem;
-          right: 0.5rem;
-        }
-      }
-    }
-
-
   }
-}
-
-.manageCart {
-  position: absolute;
-  bottom: 0.5rem;
-  right: 0.5rem;
 }
 
 @media (max-width: 768px) {

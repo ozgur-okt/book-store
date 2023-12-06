@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart, clearCart, removeFromCart } from '../redux/actions';
+import { clearCart} from '../redux/actions';
 import PaymentForm from '../components/PaymentForm'
 import styles from '../styles/pages/Cart.module.scss';
+import CartItem from '../components/CartItem';
 
 
 function Cart() {
@@ -16,17 +17,7 @@ function Cart() {
     <div className={styles.cart}>
       {!cart.length && <p className={styles.empty}>Your cart is empty</p>}
       {cart.map(item => (
-        <div key={item.book.id} className={styles.cartItem}>
-          <img src={item.book.image} alt={item.book.title} />
-          <h2 className={styles.bookTitle}>{item.book.title}</h2>
-          <p className={styles.bookAuthor}>{item.book.author}</p>
-          <p className={styles.bookPrice}>${item.book.price}</p>
-          <div className={styles.count}>
-            <button className={styles.minus} onClick={() => dispatch(removeFromCart(item.book.id))}>-</button>
-            {item.count}
-            <button className={styles.plus} onClick={() => dispatch(addToCart(item.book))}>+</button>
-          </div>
-        </div>
+        <CartItem key={item.book.id} item={item} />
       ))}
       <h2>Total: ${totalPrice.toFixed(2)}</h2>
       {totalPrice > 0 && (

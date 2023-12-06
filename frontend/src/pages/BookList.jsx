@@ -1,12 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { fetchBooks } from '../redux/actions';
-
-
 import styles from '../styles/pages/BookList.module.scss';
 import ScrollButton from '../components/ScrollButton';
-import ManageCart from '../components/ManageCart';
+import Book from '../components/Book';
 
 function BookList() {
   const dispatch = useDispatch();
@@ -52,17 +49,8 @@ function BookList() {
       <div className={styles.bookList}>
         {filteredBooks.length > 0 ?
           filteredBooks.map(book => {
-            
             return (
-              <div key={book.id} className={styles.bookCard}>
-                <Link to={`/book/${book.id}`} className={styles.link} >
-                  <img src={book.image} alt={book.title} className={styles.bookImage} />
-                  <h2 className={styles.bookTitle}>{book.title}</h2>
-                  <p className={styles.bookAuthor}>{book.author}</p>
-                  <p className={styles.bookPrice}>$ {book.price}</p>
-                </Link>
-                <ManageCart className={styles.manageCart} book={book} />
-              </div>
+              <Book key={book.id} book={book} />
             );
           })
           : <h2>No books found</h2>}
