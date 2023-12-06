@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { clearCart } from '../redux/actions';
 import successTick from '../assets/tick.svg';
-import styles from '../styles/PaymentForm.module.scss';
+import styles from '../styles/components/PaymentForm.module.scss';
 
 const PaymentForm = () => {
   const dispatch = useDispatch();
@@ -15,19 +15,19 @@ const PaymentForm = () => {
     isSubmitted: false,
   });
 
-  const submitForm = (evt) => {
-    evt.preventDefault();
+  const submitForm = (e) => {
+    e.preventDefault();
     dispatch(clearCart());
     setState((prev) => ({ ...prev, isSubmitted: true }));
   };
 
-  const onInputChange = (evt) => {
-    const { name, value } = evt.target;
+  const onInputChange = (e) => {
+    const { name, value } = e.target;
     setState((prev) => ({ ...prev, [name]: value }));
   }
 
-  const onInputFocus = (evt) => {
-    setState((prev) => ({ ...prev, focus: evt.target.name }));
+  const onInputFocus = (e) => {
+    setState((prev) => ({ ...prev, focus: e.target.name }));
   }
 
   const isValid = () => {

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart, removeFromCart } from '../redux/actions';
 import PaymentForm from '../components/PaymentForm'
-import styles from '../styles/Cart.module.scss';
+import styles from '../styles/pages/Cart.module.scss';
 
 
 function Cart() {

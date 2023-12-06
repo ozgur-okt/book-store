@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { addToCart, fetchBook, removeFromCart } from '../redux/actions';
 import { ReactComponent as CartIcon } from '../assets/cart.svg'
-import styles from '../styles/BookDetails.module.scss';
+import styles from '../styles/pages/BookDetails.module.scss';
 
 function BookDetails() {
   const { id } = useParams();

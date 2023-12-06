@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import bookIcon from '../assets/book.svg';
-import styles from '../styles/Navbar.module.scss';
+import styles from '../styles/components/Navbar.module.scss';
 
 function Navbar() {
   const cart = useSelector(state => state.books.cart);

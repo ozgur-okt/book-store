@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { addToCart, fetchBooks, removeFromCart } from '../redux/actions';
 import { ReactComponent as CartIcon } from '../assets/cart.svg'
 import upArrow from '../assets/up-arrow.svg';
-import styles from '../styles/BookList.module.scss';
+import styles from '../styles/pages/BookList.module.scss';
 
 function BookList() {
   const dispatch = useDispatch();
