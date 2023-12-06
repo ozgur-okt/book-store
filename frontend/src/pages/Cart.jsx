@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart, removeFromCart } from '../redux/actions';
+import { addToCart, clearCart, removeFromCart } from '../redux/actions';
 import PaymentForm from '../components/PaymentForm'
 import styles from '../styles/pages/Cart.module.scss';
 
@@ -20,7 +20,7 @@ function Cart() {
           <img src={item.book.image} alt={item.book.title} />
           <h2 className={styles.bookTitle}>{item.book.title}</h2>
           <p className={styles.bookAuthor}>{item.book.author}</p>
-          <p className={styles.bookPrice}>$ {item.book.price}</p>
+          <p className={styles.bookPrice}>${item.book.price}</p>
           <div className={styles.count}>
             <button className={styles.minus} onClick={() => dispatch(removeFromCart(item.book.id))}>-</button>
             {item.count}
@@ -31,9 +31,10 @@ function Cart() {
       <h2>Total: ${totalPrice.toFixed(2)}</h2>
       {totalPrice > 0 && (
         <div className={styles.buttons}>
-        <button className={styles.checkout} onClick={() => setCheckout(true)}>Checkout</button>
-        {checkout && <button className={styles.cancel} onClick={() => setCheckout(false)}>Cancel</button> }
-      </div>
+          <button className={styles.clear} onClick={() => dispatch(clearCart())}>Clear cart</button>
+          <button className={styles.checkout} onClick={() => setCheckout(true)}>Checkout</button>
+          {checkout && <button className={styles.cancel} onClick={() => setCheckout(false)}>Cancel</button>}
+        </div>
       )}
       {checkout && <PaymentForm />}
     </div>

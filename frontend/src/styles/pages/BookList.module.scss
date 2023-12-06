@@ -58,62 +58,29 @@ $color-blue: #007bff;
           overflow: hidden;
         }
 
-        .bookAuthor,
-        .bookPrice {
+        .bookAuthor {
           font-size: 1em;
         }
-      }
 
-      .count {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: absolute;
-        bottom: 0.5rem;
-        right: 0.5rem;
-        width: 6rem;
-        //border: 1px dashed #ccc;
-
-        .plus,
-        .minus {
-          display: flex;
-          justify-content: center;
-          border: none;
-          color: white;
-          background-color: $color-blue;
-          font-size: 1.5rem;
-          cursor: pointer;
-          width: 2rem;
+        .bookPrice {
+          margin: 0;
+          font-size: 1.3em;
+          font-weight: 400;
+          position: absolute;
+          bottom: 0.6rem;
+          right: 0.5rem;
         }
-
-        .minus {
-          border-radius: 1rem 0 0 1rem;
-          padding: 0 0 0.1rem 0;
-        }
-
-        .plus {
-          border-radius: 0 1rem 1rem 0;
-        }
-      }
-
-      .cartBtn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        bottom: 0.5rem;
-        right: 0.5rem;
-        border-radius: 2rem;
-        width: 10rem;
-        height: 2rem;
-        border: none;
-        color: white;
-        font-weight: 700;
-        background-color: $color-blue;
-        cursor: pointer;
       }
     }
+
+
   }
+}
+
+.manageCart {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
 }
 
 @media (max-width: 768px) {

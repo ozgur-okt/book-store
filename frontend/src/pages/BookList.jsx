@@ -1,16 +1,16 @@
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { addToCart, fetchBooks, removeFromCart } from '../redux/actions';
-import { ReactComponent as CartIcon } from '../assets/cart.svg'
+import { fetchBooks } from '../redux/actions';
+
 
 import styles from '../styles/pages/BookList.module.scss';
 import ScrollButton from '../components/ScrollButton';
+import ManageCart from '../components/ManageCart';
 
 function BookList() {
   const dispatch = useDispatch();
   const books = useSelector(state => state.books.books);
-  const cart = useSelector(state => state.books.cart);
   const loading = useSelector(state => state.books.loading);
   const error = useSelector(state => state.books.error);
 
@@ -52,7 +52,7 @@ function BookList() {
       <div className={styles.bookList}>
         {filteredBooks.length > 0 ?
           filteredBooks.map(book => {
-            const bookInCart = cart.find(item => item.book.id === book.id);
+            
             return (
               <div key={book.id} className={styles.bookCard}>
                 <Link to={`/book/${book.id}`} className={styles.link} >
@@ -61,17 +61,7 @@ function BookList() {
                   <p className={styles.bookAuthor}>{book.author}</p>
                   <p className={styles.bookPrice}>$ {book.price}</p>
                 </Link>
-                {bookInCart ? (
-                  <div className={styles.count}>
-                    <button className={styles.minus} onClick={() => dispatch(removeFromCart(book.id))}>-</button>
-                    {bookInCart.count}
-                    <button className={styles.plus} onClick={() => dispatch(addToCart(book))}>+</button>
-                  </div>
-                ) : (
-                  <button className={styles.cartBtn} onClick={() => dispatch(addToCart(book))} >
-                    Add to Cart <CartIcon />
-                  </button>
-                )}
+                <ManageCart className={styles.manageCart} book={book} />
               </div>
             );
           })
