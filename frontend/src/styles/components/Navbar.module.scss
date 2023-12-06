@@ -4,7 +4,6 @@ $color-blue: #007bff;
 .navbar {
   display: flex;
   max-height: 4rem;
-  //justify-content: flex-start;
   padding: 10px;
   background-color: $color-blue;
   border-bottom: 1px solid #ccc;
@@ -30,7 +29,6 @@ $color-blue: #007bff;
   .link {
     display: flex;
     margin-left: 2rem;
-    //border: 1px dashed red;
     font-weight: $font-weight;
     font-size: 1.2rem;
     color: white;
@@ -74,8 +72,6 @@ $color-blue: #007bff;
     align-items: flex-start;
     flex-direction: column;
     overflow: hidden;
-    //height: auto;
-
 
     .logo {
       img {
@@ -84,7 +80,6 @@ $color-blue: #007bff;
     }
 
     .link {
-      //display: none;
       margin-left: 0.6rem;
       margin-bottom: 0.7rem;
       margin-top: 0.4rem;

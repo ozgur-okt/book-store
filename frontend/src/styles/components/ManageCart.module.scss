@@ -4,11 +4,7 @@ $color-blue: #007bff;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  // position: absolute;
-  // bottom: 0.5rem;
-  // left: 0.5rem;
   width: 6rem;
-  //border: 1px dashed #ccc;
 
   .plus,
   .minus {
@@ -36,9 +32,6 @@ $color-blue: #007bff;
   display: flex;
   align-items: center;
   justify-content: center;
-  // position: absolute;
-  // bottom: 0.5rem;
-  // left: 0.5rem;
   border-radius: 2rem;
   width: 10rem;
   height: 2rem;
@@ -47,9 +40,4 @@ $color-blue: #007bff;
   font-weight: 700;
   background-color: $color-blue;
   cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .count {
-  }
 }

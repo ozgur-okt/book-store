@@ -3,10 +3,8 @@ $color-blue-light: #1e8fff7c;
 
 .paymentForm {
   display: flex;
-  //flex-direction: column;
   align-items: center;
   
-
   .form {
     display: flex;
     flex-direction: column;
@@ -28,7 +26,6 @@ $color-blue-light: #1e8fff7c;
       color: white;
       background-color: $color-blue;
       cursor: pointer;
-      //margin-top: 20px;
     }
 
     .disabled {
@@ -39,8 +36,6 @@ $color-blue-light: #1e8fff7c;
       background-color: $color-blue-light;
       cursor: not-allowed;
     }
-
-
   }
 }
 

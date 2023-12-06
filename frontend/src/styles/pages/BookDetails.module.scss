@@ -2,13 +2,11 @@ $color-blue: #007bff;
 
 .bookDetails {
   display: flex;
-  //flex-direction: column;
   align-items: center;
   margin: 20px;
   height: 28vw;
 
   .bookImage {
-    //height: 40vw;
     border-radius: 3px;
     width: 40vw;
     height: 100%;
@@ -16,26 +14,21 @@ $color-blue: #007bff;
   }
 
   .information {
-    //border: 1px dashed black;
     padding: 0 0 2rem 2rem;
     display: flex;
     flex-direction: column;
-    //gap: 2rem;
     justify-content: space-evenly;
     height: 28vw;
-    //position: relative;
 
     .bookTitle {
       font-size: 2em;
       font-weight: bold;
       margin: 0;
-      //margin-top: 20px;
     }
 
     .bookAuthor {
       font-size: 1.5em;
       margin: 0;
-      //margin-top: 10px;
     }
 
     .bookPrice {
@@ -43,17 +36,10 @@ $color-blue: #007bff;
       margin: 0;
     }
 
-    .bookDescription {
-      //font-size: 1.2em;
-      margin: 0;
-    }
-
+    .bookDescription,
     .pageCount {
-      //font-size: 1.2em;
       margin: 0;
     }
-
-    
   }
 }
 
@@ -83,16 +69,8 @@ $color-blue: #007bff;
         margin-top: 10px;
       }
 
-      .bookPrice {
-        font-size: 1em;
-        margin: 10px 0;
-      }
-
-      .bookDescription {
-        font-size: 1em;
-        margin: 10px 0;
-      }
-
+      .bookPrice,
+      .bookDescription,
       .pageCount {
         font-size: 1em;
         margin: 10px 0;
