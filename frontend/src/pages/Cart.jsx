@@ -1,26 +1,16 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { addToCart, clearCart, removeFromCart } from '../redux/actions';
-import PaymentForm from '../components/PaymentForm'
-
-import styles from '../styles/Cart.module.scss';
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { addToCart, removeFromCart } from '../redux/actions';
+import PaymentForm from '../components/PaymentForm'
+import styles from '../styles/Cart.module.scss';
+
 
 function Cart() {
   const dispatch = useDispatch();
   const cart = useSelector(state => state.books.cart);
   const [checkout, setCheckout] = useState(false);
 
-  const handleAddToCart = (book) => {
-    dispatch(addToCart(book));
-  };
-
-  const handleRemoveFromCart = (bookId) => {
-    dispatch(removeFromCart(bookId));
-  };
-
   const totalPrice = cart.reduce((total, item) => total + item.book.price * item.count, 0);
-
- 
 
   return (
     <div className={styles.cart}>
@@ -32,9 +22,9 @@ function Cart() {
           <p className={styles.bookAuthor}>{item.book.author}</p>
           <p className={styles.bookPrice}>$ {item.book.price}</p>
           <div className={styles.count}>
-            <button className={styles.minus} onClick={() => handleRemoveFromCart(item.book.id)}>-</button>
+            <button className={styles.minus} onClick={() => dispatch(removeFromCart(item.book.id))}>-</button>
             {item.count}
-            <button className={styles.plus} onClick={() => handleAddToCart(item.book)}>+</button>
+            <button className={styles.plus} onClick={() => dispatch(addToCart(item.book))}>+</button>
           </div>
         </div>
       ))}

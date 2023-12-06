@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import Cards from 'react-credit-cards-2';
-import 'react-credit-cards-2/dist/lib/styles.scss';
-import styles from '../styles/PaymentForm.module.scss';
 import { clearCart } from '../redux/actions';
-import tick from '../assets/tick.svg';
+import successTick from '../assets/tick.svg';
+import styles from '../styles/PaymentForm.module.scss';
 
 const PaymentForm = () => {
+  const dispatch = useDispatch();
   const [state, setState] = useState({
     number: '',
     expiry: '',
@@ -16,20 +15,18 @@ const PaymentForm = () => {
     isSubmitted: false,
   });
 
-  const dispatch = useDispatch();
-
-  const handleSubmit = (evt) => {
+  const submitForm = (evt) => {
     evt.preventDefault();
     dispatch(clearCart());
     setState((prev) => ({ ...prev, isSubmitted: true }));
   };
 
-  const handleInputChange = (evt) => {
+  const onInputChange = (evt) => {
     const { name, value } = evt.target;
     setState((prev) => ({ ...prev, [name]: value }));
   }
 
-  const handleInputFocus = (evt) => {
+  const onInputFocus = (evt) => {
     setState((prev) => ({ ...prev, focus: evt.target.name }));
   }
 
@@ -40,59 +37,59 @@ const PaymentForm = () => {
       state.cvc.length > 0;
   };
 
-  if (state.isSubmitted) {
-    return (
-      <div className={styles.success}>
-        <img src={tick} alt="tick" />
-        <p>Your payment is successful!</p>
-      </div>
-    )
-  }
-
   return (
-    <div className={styles.paymentForm}>
-      <Cards
-        number={state.number}
-        expiry={state.expiry}
-        cvc={state.cvc}
-        name={state.name}
-        focused={state.focus}
-      />
-      <form className={styles.form} onSubmit={handleSubmit}>
-        <input
-          type="number"
-          name="number"
-          placeholder="Card Number"
-          value={state.number}
-          onChange={handleInputChange}
-          onFocus={handleInputFocus}
-        />
-        <input
-          type="text"
-          name="name"
-          placeholder="Name"
-          value={state.name}
-          onChange={handleInputChange}
-          onFocus={handleInputFocus}
-        />
-        <input
-          type="text"
-          name="expiry"
-          placeholder="MM/YY Expiry"
-          value={state.expiry}
-          onChange={handleInputChange}
-          onFocus={handleInputFocus}
-        />
-        <input
-          type="number"
-          name="cvc"
-          placeholder="CVC"
-          value={state.cvc}
-          onChange={handleInputChange}
-          onFocus={handleInputFocus}
-        />
-        <button className={!isValid() ? styles.disabled : styles.submit} type="submit" disabled={!isValid()}>Submit</button>
-      </form>
+    <div>
+      {!state.isSubmitted ?
+        <div className={styles.paymentForm}>
+          {/* <Cards
+            number={state.number}
+            expiry={state.expiry}
+            cvc={state.cvc}
+            name={state.name}
+            focused={state.focus}
+          /> */}
+          <form className={styles.form} onSubmit={submitForm}>
+            <input
+              type="number"
+              name="number"
+              placeholder="Card Number"
+              value={state.number}
+              onChange={onInputChange}
+              onFocus={onInputFocus}
+            />
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              value={state.name}
+              onChange={onInputChange}
+              onFocus={onInputFocus}
+            />
+            <input
+              type="text"
+              name="expiry"
+              placeholder="MM/YY Expiry"
+              value={state.expiry}
+              onChange={onInputChange}
+              onFocus={onInputFocus}
+            />
+            <input
+              type="number"
+              name="cvc"
+              placeholder="CVC"
+              value={state.cvc}
+              onChange={onInputChange}
+              onFocus={onInputFocus}
+            />
+            <button className={!isValid() ? styles.disabled : styles.submit} type="submit" disabled={!isValid()}>Submit</button>
+          </form>
+        </div>
+        :
+        <div className={styles.success}>
+          <img src={successTick} alt="successTick" />
+          <p>Your payment is successful!</p>
+        </div>
+      }
     </div>
   );
 }

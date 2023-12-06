@@ -49,3 +49,47 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .bookDetails {
+    flex-direction: column;
+    height: auto;
+
+    .bookImage {
+      width: 100%;
+      height: auto;
+    }
+
+    .information {
+      padding: 0;
+      height: auto;
+      margin-top: 20px;
+
+      .bookTitle {
+        font-size: 1.5em;
+        margin: 0;
+        margin-top: 20px;
+      }
+
+      .bookAuthor {
+        font-size: 1.2em;
+        margin-top: 10px;
+      }
+
+      .bookPrice {
+        font-size: 1em;
+        margin: 10px 0;
+      }
+
+      .bookDescription {
+        font-size: 1em;
+        margin: 10px 0;
+      }
+
+      .pageCount {
+        font-size: 1em;
+        margin: 10px 0;
+      }
+    }
+  }
+}

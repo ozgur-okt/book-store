@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import BookDetails from './components/BookDetails';
-import BookList from './components/BookList';
+import BookDetails from './pages/BookDetails';
+import BookList from './pages/BookList';
 import Navbar from './components/Navbar';
-import Cart from './components/Cart';
+import Cart from './pages/Cart';
 
 function App() {
   return (

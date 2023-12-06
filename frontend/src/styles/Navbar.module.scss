@@ -8,23 +8,26 @@ $color-blue: #007bff;
   padding: 10px;
   background-color: $color-blue;
   border-bottom: 1px solid #ccc;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   align-items: center;
 
-  img {
-    margin-left: 3rem;
-  }
+  .logo {
+    display: flex;
 
-  .title {
-    font-size: 1.5rem;
-    font-weight: $font-weight;
-    color: white;
-    margin-right: 2rem;
+    img {
+      margin-left: 3rem;
+    }
+  
+    .title {
+      font-size: 1.5rem;
+      font-weight: $font-weight;
+      color: white;
+      margin-right: 2rem;
+    }
   }
-
   .link {
     display: flex;
-    margin-left: 1rem;
+    margin-left: 2rem;
     //border: 1px dashed red;
     font-weight: $font-weight;
     font-size: 1.2rem;
@@ -50,6 +53,18 @@ $color-blue: #007bff;
       margin-left: 0.5rem;
     }
   }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+
+    .link {
+      margin-bottom: 0.5rem;
+    }
+  }
 
 }
+
 
