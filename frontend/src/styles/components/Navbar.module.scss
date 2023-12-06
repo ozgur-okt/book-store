@@ -17,7 +17,7 @@ $color-blue: #007bff;
     img {
       margin-left: 3rem;
     }
-  
+
     .title {
       font-size: 1.5rem;
       font-weight: $font-weight;
@@ -25,6 +25,7 @@ $color-blue: #007bff;
       margin-right: 2rem;
     }
   }
+
   .link {
     display: flex;
     margin-left: 2rem;
@@ -34,7 +35,7 @@ $color-blue: #007bff;
     color: white;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
-  
+
     &:hover {
       border-bottom: 1px solid white;
     }
@@ -53,19 +54,41 @@ $color-blue: #007bff;
       margin-left: 0.5rem;
     }
   }
+
+  .barIcon {
+    display: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
 }
 
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    height: auto;
+    justify-content: space-between;
+    //position: relative;
+    // flex-direction: column;
+    // height: auto;
+
+    .logo {
+      img {
+        margin-left: 0;
+      }
+    }
 
     .link {
-      margin-left: 0;
-      margin-bottom: 0.5rem;
+      display: none;
+    }
+
+    .barIcon {
+      display: block;
+
+      // position: absolute;
+      // top: 0;
+      // left: 0;
+      &:hover {
+        scale: 1.1;
+      }
     }
   }
 
 }
-
-

@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import bookIcon from '../assets/book.svg';
+import barIcon from '../assets/bars.svg';
 import styles from '../styles/components/Navbar.module.scss';
 
 function Navbar() {
@@ -10,7 +11,7 @@ function Navbar() {
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
-        <img src={bookIcon} alt="Book Icon" className={styles.icon} />
+        <img src={bookIcon} alt="Book Icon" className={styles.bookIcon} />
         <h1 className={styles.title}>BookStore</h1>
       </div>
       <Link to="/" className={styles.link}>Book List</Link>
@@ -20,6 +21,7 @@ function Navbar() {
           <span className={styles.cartCount}>{totalItems}</span>
         )}
       </Link>
+      <img src={barIcon} alt="Bar Icon" className={styles.barIcon} />
     </nav>
   );
 }

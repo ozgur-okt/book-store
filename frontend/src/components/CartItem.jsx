@@ -10,8 +10,8 @@ const CartItem = ({ item }) => {
         <h2 className={styles.bookTitle}>{item.book.title}</h2>
         <p className={styles.bookAuthor}>{item.book.author}</p>
         <p className={styles.bookPrice}>${item.book.price}</p>
-        <ManageCart book={item.book} />
       </div>
+      <ManageCart book={item.book} />
     </div>
   )
 }
