@@ -27,7 +27,7 @@ $color-blue: #007bff;
       //border: 1px dashed blue;
       display: flex;
       align-items: center;
-      width: 30%;
+      width: 50%;
       font-size: 18px;
       font-weight: bold;
     }
@@ -38,8 +38,9 @@ $color-blue: #007bff;
     }
 
     .bookPrice {
-    //border: 1px dashed blue;
-      width: 40%;
+      //border: 1px dashed blue;
+      width: 30%;
+      margin-left: 1rem;
     }
   }
 }

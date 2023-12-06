@@ -3,13 +3,14 @@ $color-blue: #007bff;
 
 .navbar {
   display: flex;
-  height: 4rem;
+  max-height: 4rem;
   //justify-content: flex-start;
   padding: 10px;
   background-color: $color-blue;
   border-bottom: 1px solid #ccc;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   align-items: center;
+  transition: max-height 0.4s ease-in-out;
 
   .logo {
     display: flex;
@@ -62,12 +63,18 @@ $color-blue: #007bff;
   }
 }
 
+.navbar.expanded {
+  max-height: 20rem; 
+}
+
 @media (max-width: 768px) {
   .navbar {
     justify-content: space-between;
-    //position: relative;
-    // flex-direction: column;
-    // height: auto;
+    align-items: flex-start;
+    flex-direction: column;
+    overflow: hidden;
+    //height: auto;
+
 
     .logo {
       img {
@@ -76,15 +83,18 @@ $color-blue: #007bff;
     }
 
     .link {
-      display: none;
+      //display: none;
+      margin-left: 0;
+      margin-bottom: 0.7rem;
+      margin-top: 0.4rem;
     }
 
     .barIcon {
       display: block;
+      position: absolute;
+      top: 1.5rem;
+      right: 0;
 
-      // position: absolute;
-      // top: 0;
-      // left: 0;
       &:hover {
         scale: 1.1;
       }
