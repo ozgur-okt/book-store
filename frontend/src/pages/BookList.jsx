@@ -3,8 +3,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { addToCart, fetchBooks, removeFromCart } from '../redux/actions';
 import { ReactComponent as CartIcon } from '../assets/cart.svg'
-import upArrow from '../assets/up-arrow.svg';
+
 import styles from '../styles/pages/BookList.module.scss';
+import ScrollButton from '../components/ScrollButton';
 
 function BookList() {
   const dispatch = useDispatch();
@@ -15,13 +16,7 @@ function BookList() {
 
   const [searchTerm, setSearchTerm] = useState('');
   const [delayedSearchTerm, setDelayedSearchTerm] = useState('');
-  const [showScroll, setShowScroll] = useState(false);
-
-
-  const scrollTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
+  
   useEffect(() => {
     dispatch(fetchBooks());
   }, [dispatch]);
@@ -35,19 +30,6 @@ function BookList() {
       clearTimeout(searchTimer);
     };
   }, [searchTerm]);
-
-  useEffect(() => {
-    const checkScrollTop = () => {
-      if (!showScroll && window.scrollY > 400) {
-        setShowScroll(true);
-      } else if (showScroll && window.scrollY <= 400) {
-        setShowScroll(false);
-      }
-    };
-
-    window.addEventListener('scroll', checkScrollTop);
-    return () => window.removeEventListener('scroll', checkScrollTop);
-  }, [showScroll]);
 
   if (loading) {
     return <h2>Loading...</h2>;
@@ -95,7 +77,7 @@ function BookList() {
           })
           : <h2>No books found</h2>}
       </div>
-      {showScroll && <button className={styles.scrollTop} onClick={scrollTop}><img src={upArrow} alt='scroll' /></button>}
+      <ScrollButton />
     </div>
   );
 }
