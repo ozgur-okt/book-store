@@ -5,13 +5,11 @@ $color-blue: #007bff;
   flex-direction: column;
   align-items: center;
   padding: 0 0 10rem 0;
+  margin-top: 2rem;
 
   .empty {
     color: $color-blue;
   }
-
-
- 
 
   h2 {
     color: $color-blue;
@@ -21,34 +19,28 @@ $color-blue: #007bff;
     display: flex;
     gap: 1rem;
 
-    .checkout {
+    .button {
       margin: 1rem 0 5rem 0;
       padding: 0.5rem 1rem;
       border: none;
       border-radius: 1rem;
-      background-color: $color-blue;
       color: white;
       font-size: 1rem;
       font-weight: 700;
       letter-spacing: 0.04rem;
       cursor: pointer;
+    }
 
+    .checkout {
+      background-color: $color-blue;
+      
       &:hover {
         background-color: #0069d9;
       }
     }
 
     .clear {
-      margin: 1rem 0 5rem 0;
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: 1rem;
       background-color: #ffc107;
-      color: white;
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: 0.04rem;
-      cursor: pointer;
 
       &:hover {
         background-color: #e0a800;
@@ -56,16 +48,7 @@ $color-blue: #007bff;
     }
 
     .cancel {
-      margin: 1rem 0 5rem 0;
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: 1rem;
       background-color: #dc3545;
-      color: white;
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: 0.04rem;
-      cursor: pointer;
 
       &:hover {
         background-color: #c82333;
@@ -77,5 +60,6 @@ $color-blue: #007bff;
 @media screen and (max-width: 768px) {
   .cart {
     width: 100%;
+    border-top: 1px solid #ccc;
   }
 }

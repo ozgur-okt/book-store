@@ -22,9 +22,9 @@ function Cart() {
       <h2>Total: ${totalPrice.toFixed(2)}</h2>
       {totalPrice > 0 && (
         <div className={styles.buttons}>
-          <button className={styles.clear} onClick={() => dispatch(clearCart())}>Clear cart</button>
-          <button className={styles.checkout} onClick={() => setCheckout(true)}>Checkout</button>
-          {checkout && <button className={styles.cancel} onClick={() => setCheckout(false)}>Cancel</button>}
+          <button className={`${styles.button} ${styles.clear}`} onClick={() => dispatch(clearCart())}>Clear cart</button>
+          <button className={`${styles.button} ${styles.checkout}`} onClick={() => setCheckout(true)}>Checkout</button>
+          {checkout && <button className={`${styles.button} ${styles.cancel}`} onClick={() => setCheckout(false)}>Cancel</button>}
         </div>
       )}
       {checkout && <PaymentForm />}
