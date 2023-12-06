@@ -67,15 +67,6 @@ function BookList() {
         value={searchTerm}
         onChange={event => setSearchTerm(event.target.value)}
       />
-      {/* {searchTerm && (
-        <div className={styles.searchResults}>
-          {filteredBooks.map(book => (
-            <Link to={`/book/${book.id}`} key={book.id} className={styles.link}>
-              {book.title}
-            </Link>
-          ))}
-        </div>
-      )} */}
       <div className={styles.bookList}>
         {filteredBooks.length > 0 ?
           filteredBooks.map(book => {
