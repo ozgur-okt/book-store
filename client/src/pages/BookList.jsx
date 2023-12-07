@@ -28,17 +28,9 @@ function BookList() {
     }
   }, [searchTerm])
 
-  if (loading) {
-    return <h2>Loading...</h2>
-  }
-
-  if (error) {
-    return <h2>{error}</h2>
-  }
-
-  if (!books) {
-    return <h2>No books found</h2>
-  }
+  if (loading) return <h2>Loading...</h2>
+  if (error) return <h2>{error}</h2>
+  if (!books) return <h2>No books found</h2>
 
   const filteredBooks = books.filter(book => book.title.toLowerCase().includes(delayedSearchTerm.toLowerCase()))
 

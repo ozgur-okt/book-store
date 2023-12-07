@@ -16,18 +16,10 @@ function BookDetails() {
     dispatch(fetchBook(id))
   }, [dispatch, id])
 
-  if (loading) {
-    return <h2>Loading...</h2>
-  }
-
-  if (error) {
-    return <h2>{error}</h2>
-  }
-
-  if (!book) {
-    return <h2>Book not found</h2>
-  }
-
+  if (loading) return <h2>Loading...</h2>
+  if (error) return <h2>{error}</h2>
+  if (!book) return <h2>Book not found</h2>
+  
   return (
     <div className={styles.bookDetails}>
       <div className={styles.bookImage}>
