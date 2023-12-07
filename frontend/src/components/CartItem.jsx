@@ -1,9 +1,10 @@
+import { Link } from 'react-router-dom'
 import ManageCart from './ManageCart'
 import styles from '../styles/components/CartItem.module.scss'
 
 const CartItem = ({ item }) => {
   return (
-    <div key={item.book.id} className={styles.cartItem}>
+    <Link to={`/book/${item.book.id}`} className={styles.cartItem}>
       <div className={styles.image}>
         <img src={item.book.image} alt={item.book.title} />
       </div>
@@ -13,7 +14,7 @@ const CartItem = ({ item }) => {
         <p className={styles.bookPrice}>${item.book.price}</p>
       </div>
       <ManageCart book={item.book} />
-    </div>
+    </Link>
   )
 }
 
