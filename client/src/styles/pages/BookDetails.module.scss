@@ -9,12 +9,11 @@ $color-blue: #007bff;
   .bookImage {
     width: 80vw;
     height: 100%;
-    //object-fit: cover;
 
     img{
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       border-radius: 3px;
     }
   }
