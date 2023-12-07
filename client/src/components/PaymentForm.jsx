@@ -41,13 +41,6 @@ const PaymentForm = () => {
     <div>
       {!state.isSubmitted ?
         <div className={styles.paymentForm}>
-          {/* <Cards
-            number={state.number}
-            expiry={state.expiry}
-            cvc={state.cvc}
-            name={state.name}
-            focused={state.focus}
-          /> */}
           <form className={styles.form} onSubmit={submitForm}>
             <input
               type="number"
