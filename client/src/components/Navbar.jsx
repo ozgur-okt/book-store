@@ -1,16 +1,16 @@
-import { useState } from 'react';
-import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
-import bookIcon from '../assets/book.svg';
-import barIcon from '../assets/bars.svg';
-import styles from '../styles/components/Navbar.module.scss';
+import { useState } from 'react'
+import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
+import bookIcon from '../assets/book.svg'
+import barIcon from '../assets/bars.svg'
+import styles from '../styles/components/Navbar.module.scss'
 
 function Navbar() {
-  const [isNavbarExpanded, setIsNavbarExpanded] = useState(false);
-  const cart = useSelector(state => state.books.cart);
-  const totalItems = cart.length;
+  const [isNavbarExpanded, setIsNavbarExpanded] = useState(false)
+  const cart = useSelector(state => state.books.cart)
+  const totalItems = cart.length
 
-  const toggleNavbar = () => setIsNavbarExpanded(!isNavbarExpanded);
+  const toggleNavbar = () => setIsNavbarExpanded(!isNavbarExpanded)
 
   return (
     <nav className={`${styles.navbar} ${isNavbarExpanded ? styles.expanded : ''}`}>
@@ -27,7 +27,7 @@ function Navbar() {
       </Link>
       <img src={barIcon} alt="Bar Icon" className={styles.barIcon} onClick={toggleNavbar} />
     </nav>
-  );
+  )
 }
 
-export default Navbar;
+export default Navbar

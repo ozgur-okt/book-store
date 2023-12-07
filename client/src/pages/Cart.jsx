@@ -1,16 +1,16 @@
-import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { clearCart} from '../redux/actions';
+import { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { clearCart} from '../redux/actions'
 import PaymentForm from '../components/PaymentForm'
-import CartItem from '../components/CartItem';
-import styles from '../styles/pages/Cart.module.scss';
+import CartItem from '../components/CartItem'
+import styles from '../styles/pages/Cart.module.scss'
 
 function Cart() {
-  const dispatch = useDispatch();
-  const cart = useSelector(state => state.books.cart);
-  const [checkout, setCheckout] = useState(false);
+  const dispatch = useDispatch()
+  const cart = useSelector(state => state.books.cart)
+  const [checkout, setCheckout] = useState(false)
 
-  const totalPrice = cart.reduce((total, item) => total + item.book.price * item.count, 0);
+  const totalPrice = cart.reduce((total, item) => total + item.book.price * item.count, 0)
 
   return (
     <div className={styles.cart}>
@@ -28,7 +28,7 @@ function Cart() {
       )}
       {checkout && <PaymentForm />}
     </div>
-  );
+  )
 }
 
-export default Cart;
+export default Cart

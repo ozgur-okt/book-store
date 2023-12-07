@@ -1,28 +1,27 @@
-import { useEffect, useState } from 'react';
-import upArrow from '../assets/up-arrow.svg';
-import styles from '../styles/components/ScrollButton.module.scss';
+import { useEffect, useState } from 'react'
+import upArrow from '../assets/up-arrow.svg'
+import styles from '../styles/components/ScrollButton.module.scss'
 
 const ScrollButton = () => {
-  const [showScroll, setShowScroll] = useState(false);
+  const [showScroll, setShowScroll] = useState(false)
   
-  const SCROLL_THRESHOLD = 400;
+  const SCROLL_THRESHOLD = 400
 
   const scrollTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 
   useEffect(() => {
     const checkScrollTop = () => {
       if (!showScroll && window.scrollY > SCROLL_THRESHOLD) {
-        setShowScroll(true);
+        setShowScroll(true)
       } else if (showScroll && window.scrollY <= SCROLL_THRESHOLD) {
-        setShowScroll(false);
+        setShowScroll(false)
       }
-    };
-
-    window.addEventListener('scroll', checkScrollTop);
-    return () => window.removeEventListener('scroll', checkScrollTop);
-  }, [showScroll]);
+    }
+    window.addEventListener('scroll', checkScrollTop)
+    return () => window.removeEventListener('scroll', checkScrollTop)
+  }, [showScroll])
 
   return (
     <button className={styles.scrollTop} onClick={scrollTop} style={{display: !showScroll && 'none' }}>
@@ -31,4 +30,4 @@ const ScrollButton = () => {
   )
 }
 
-export default ScrollButton;
+export default ScrollButton

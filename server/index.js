@@ -1,28 +1,28 @@
-const express = require('express');
-const cors = require('cors');
+const express = require('express')
+const cors = require('cors')
 
-const app = express();
-const port = 5000;
-const books = require('./data');
+const app = express()
+const port = 5000
+const books = require('./data')
 
-app.use(cors());
+app.use(cors())
 
 app.get('/api/books', (req, res) => {
   if (!books) {
-    res.status(404).json({ message: 'No books found' });
+    res.status(404).json({ message: 'No books found' })
   }
-  res.json(books);
-});
+  res.json(books)
+})
 
 app.get('/api/books/:id', (req, res) => {
-  const id = parseInt(req.params.id);
-  const book = books.find(book => book.id === id);
+  const id = parseInt(req.params.id)
+  const book = books.find(book => book.id === id)
   if (!book) {
-    res.status(404).json({ message: 'Book not found' });
+    res.status(404).json({ message: 'Book not found' })
   }
-  res.json(book);
-});
+  res.json(book)
+})
 
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+  console.log(`Server is running on port ${port}`)
+})

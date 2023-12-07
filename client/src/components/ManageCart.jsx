@@ -6,7 +6,7 @@ import styles from '../styles/components/ManageCart.module.scss'
 const ManageCart = ({ book }) => {
   const dispatch = useDispatch()
   const cart = useSelector(state => state.books.cart)
-  const bookInCart = cart.find(item => item.book.id === book.id);
+  const bookInCart = cart.find(item => item.book.id === book.id)
 
   return (
     <div>

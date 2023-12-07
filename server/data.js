@@ -269,6 +269,6 @@ const books = [
     description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?silent-patient',
   },
-];
+]
 
-module.exports = books;
+module.exports = books
