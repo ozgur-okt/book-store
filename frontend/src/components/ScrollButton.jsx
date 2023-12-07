@@ -4,6 +4,8 @@ import styles from '../styles/components/ScrollButton.module.scss';
 
 const ScrollButton = () => {
   const [showScroll, setShowScroll] = useState(false);
+  
+  const SCROLL_THRESHOLD = 400;
 
   const scrollTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -11,9 +13,9 @@ const ScrollButton = () => {
 
   useEffect(() => {
     const checkScrollTop = () => {
-      if (!showScroll && window.scrollY > 400) {
+      if (!showScroll && window.scrollY > SCROLL_THRESHOLD) {
         setShowScroll(true);
-      } else if (showScroll && window.scrollY <= 400) {
+      } else if (showScroll && window.scrollY <= SCROLL_THRESHOLD) {
         setShowScroll(false);
       }
     };

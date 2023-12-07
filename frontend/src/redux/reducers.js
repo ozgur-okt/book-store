@@ -41,7 +41,6 @@ export const bookReducer = (state = initialState, action) => {
       if (!updatedCart.find(item => item.book.id === action.payload.id)) {
         updatedCart.push({ book: action.payload, count: 1 });
       }
-
       return { ...state, cart: updatedCart };
     }
     case REMOVE_FROM_CART: {
@@ -51,9 +50,7 @@ export const bookReducer = (state = initialState, action) => {
         }
         return item;
       });
-
       updatedCart = updatedCart.filter(item => item.count > 0);
-
       return { ...state, cart: updatedCart };
     }
     case CLEAR_CART:
