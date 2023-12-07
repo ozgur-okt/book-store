@@ -69,24 +69,19 @@ $color-blue: #007bff;
     }
 
     .info {
-      //flex-direction: column;
-
       .bookTitle {
         width: 100%;
         margin: 0;
-        border: 1px dashed #ccc;
       }
 
       .bookAuthor {
         width: 100%;
         margin: 0;
-        border: 1px dashed #ccc;
       }
 
       .bookPrice {
         width: 100%;
         margin: 0;
-        border: 1px dashed #ccc;
       }
     }
   }
@@ -95,7 +90,7 @@ $color-blue: #007bff;
 @media (max-width: 660px) {
   .info {
     flex-direction: column;
-    border: 1px dashed #ccc;
+    gap: 0.3rem;
 
     .bookTitle {
       width: max-content;
@@ -106,15 +101,11 @@ $color-blue: #007bff;
 
     .bookAuthor {
       width: max-content;
-      margin: 0.5rem 0 0 0;
-      border: 1px dashed #ccc;
       text-align: center;
     }
 
     .bookPrice {
       width: max-content;
-      margin: 0.5rem 0 0 0;
-      border: 1px dashed #ccc;
       text-align: center;
     }
   }

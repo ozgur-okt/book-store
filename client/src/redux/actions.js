@@ -16,7 +16,7 @@ export const fetchBooks = () => async dispatch => {
     const books = await response.json();
     dispatch({ type: FETCH_BOOKS, status: 'success', payload: books });
   } catch (error) {
-    dispatch({ type: FETCH_BOOKS, status: 'error', error });
+    dispatch({ type: FETCH_BOOKS, status: 'error', error: error.message });
   }
 };
 
@@ -30,7 +30,7 @@ export const fetchBook = (id) => async dispatch => {
     const book = await response.json();
     dispatch({ type: FETCH_BOOK, status: 'success', payload: book });
   } catch (error) {
-    dispatch({ type: FETCH_BOOK, status: 'error', error });
+    dispatch({ type: FETCH_BOOK, status: 'error', error: error.message });
   }
 };
 

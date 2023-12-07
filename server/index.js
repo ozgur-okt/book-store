@@ -17,12 +17,10 @@ app.get('/api/books', (req, res) => {
 app.get('/api/books/:id', (req, res) => {
   const id = parseInt(req.params.id);
   const book = books.find(book => book.id === id);
-
-  if (book) {
-    res.json(book);
-  } else {
-    res.status(404).json({ error: 'Book not found' });
+  if (!book) {
+    res.status(404).json({ message: 'Book not found' });
   }
+  res.json(book);
 });
 
 app.listen(port, () => {

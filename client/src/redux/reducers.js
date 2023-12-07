@@ -21,14 +21,14 @@ export const bookReducer = (state = initialState, action) => {
         ...state,
         loading: action.status === 'loading',
         books: action.status === 'success' ? action.payload : state.books,
-        error: action.status === 'error' ? action.error : null,
+        error: action.status === 'error' ? action.error : state.error,
       };
     case FETCH_BOOK:
       return {
         ...state,
         loading: action.status === 'loading',
         book: action.status === 'success' ? action.payload : state.book,
-        error: action.status === 'error' ? action.error : null,
+        error: action.status === 'error' ? action.error : state.error,
       };
     case ADD_TO_CART: {
       const updatedCart = state.cart.map(item => {
