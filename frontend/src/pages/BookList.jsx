@@ -1,19 +1,19 @@
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchBooks } from '../redux/actions';
-import styles from '../styles/pages/BookList.module.scss';
 import ScrollButton from '../components/ScrollButton';
 import Book from '../components/Book';
+import styles from '../styles/pages/BookList.module.scss';
 
 function BookList() {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
   const books = useSelector(state => state.books.books);
   const loading = useSelector(state => state.books.loading);
   const error = useSelector(state => state.books.error);
 
   const [searchTerm, setSearchTerm] = useState('');
   const [delayedSearchTerm, setDelayedSearchTerm] = useState('');
-  
+
   useEffect(() => {
     dispatch(fetchBooks());
   }, [dispatch]);

@@ -1,11 +1,9 @@
-import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { addToCart, removeFromCart } from '../redux/actions'
 import { ReactComponent as CartIcon } from '../assets/cart.svg'
 import styles from '../styles/components/ManageCart.module.scss'
 
-
-const ManageCart = ({book}) => {
+const ManageCart = ({ book }) => {
   const dispatch = useDispatch()
   const cart = useSelector(state => state.books.cart)
   const bookInCart = cart.find(item => item.book.id === book.id);

@@ -2,9 +2,8 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { clearCart} from '../redux/actions';
 import PaymentForm from '../components/PaymentForm'
-import styles from '../styles/pages/Cart.module.scss';
 import CartItem from '../components/CartItem';
-
+import styles from '../styles/pages/Cart.module.scss';
 
 function Cart() {
   const dispatch = useDispatch();

@@ -1,9 +1,8 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import ManageCart from './ManageCart'
 import styles from '../styles/components/Book.module.scss'
 
-const Book = ({book}) => {
+const Book = ({ book }) => {
   return (
     <div className={styles.bookCard}>
       <Link to={`/book/${book.id}`} className={styles.link} >

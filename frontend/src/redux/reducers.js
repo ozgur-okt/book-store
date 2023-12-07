@@ -1,4 +1,10 @@
-import { ADD_TO_CART, CLEAR_CART, FETCH_BOOK, FETCH_BOOKS, REMOVE_FROM_CART } from './actions';
+import { 
+  ADD_TO_CART, 
+  CLEAR_CART, 
+  FETCH_BOOK, 
+  FETCH_BOOKS, 
+  REMOVE_FROM_CART 
+} from './actions';
 
 const initialState = {
   books: [],

@@ -2,8 +2,8 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { fetchBook } from '../redux/actions';
-import styles from '../styles/pages/BookDetails.module.scss';
 import ManageCart from '../components/ManageCart';
+import styles from '../styles/pages/BookDetails.module.scss';
 
 function BookDetails() {
   const { id } = useParams();

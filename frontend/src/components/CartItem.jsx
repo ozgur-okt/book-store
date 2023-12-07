@@ -1,4 +1,3 @@
-import React from 'react'
 import ManageCart from './ManageCart'
 import styles from '../styles/components/CartItem.module.scss'
 
