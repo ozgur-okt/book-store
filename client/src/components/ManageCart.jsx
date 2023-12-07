@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { addToCart, removeFromCart } from '../redux/actions'
-import { ReactComponent as CartIcon } from '../assets/cart.svg'
+import cartIcon from '../assets/cart.svg'
 import styles from '../styles/components/ManageCart.module.scss'
 
 const ManageCart = ({ book }) => {
@@ -18,7 +18,7 @@ const ManageCart = ({ book }) => {
         </div>
       ) : (
         <button className={styles.cartBtn} onClick={() => dispatch(addToCart(book))} >
-          Add to Cart <CartIcon />
+          Add to Cart <img src={cartIcon} alt='cart' />
         </button>
       )}
     </div>
