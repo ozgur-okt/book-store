@@ -14,12 +14,12 @@ function Navbar() {
 
   return (
     <nav className={`${styles.navbar} ${isNavbarExpanded ? styles.expanded : ''}`}>
-      <Link to="/" className={styles.logo} onClick={isNavbarExpanded && toggleNavbar}>
+      <div className={styles.logo}>
         <img src={bookIcon} alt="Book Icon" className={styles.bookIcon} />
         <h1 className={styles.title}>BookStore</h1>
-      </Link>
-      <Link to="/" className={styles.link} onClick={isNavbarExpanded && toggleNavbar}>Book List</Link>
-      <Link to="/cart" className={styles.link} onClick={isNavbarExpanded && toggleNavbar} >
+      </div>
+      <Link to="/" className={styles.link}>Book List</Link>
+      <Link to="/cart" className={styles.link}>
         Cart
         {totalItems > 0 && (
           <span className={styles.cartCount}>{totalItems}</span>
