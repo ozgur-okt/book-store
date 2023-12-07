@@ -13,33 +13,43 @@ $color-blue: #007bff;
     background-color: #f5f5f5;
   }
 
-  img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-  }
-
-  .info {
+  .link {
     display: flex;
-    width: 100%;
-    padding: 0 0.5rem;
     align-items: center;
+    text-decoration: none;
+    color: $color-blue;
+    width: 100%;
 
-    .bookTitle {
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+
+    .info {
       display: flex;
+      width: 100%;
+      padding: 0 0.5rem;
       align-items: center;
-      width: 45%;
-      font-size: 18px;
-      font-weight: bold;
-    }
 
-    .bookAuthor {
-      width: 25%;
-    }
+      .bookTitle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 45%;
+        font-size: 18px;
+        font-weight: bold;
+      }
 
-    .bookPrice {
-      width: 30%;
-      margin-left: 1rem;
+      .bookAuthor {
+        width: 35%;
+        justify-content: center;
+      }
+
+      .bookPrice {
+        width: 30%;
+        justify-content: center;
+      }
     }
   }
 }
@@ -47,28 +57,59 @@ $color-blue: #007bff;
 @media (max-width: 960px) {
   .cartItem {
     width: 94%;
-    
+
     &:first-child {
       border-top: 1px solid #ccc;
     }
 
-    .info{
-      flex-direction: column;
-      
+    .info {
+      //flex-direction: column;
+
       .bookTitle {
         width: 100%;
         margin: 0;
+        border: 1px dashed #ccc;
       }
-  
+
       .bookAuthor {
         width: 100%;
         margin: 0.5rem 0 0 0;
+        border: 1px dashed #ccc;
       }
-  
+
       .bookPrice {
         width: 100%;
         margin: 0.5rem 0 0 0;
+        border: 1px dashed #ccc;
       }
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .info {
+    flex-direction: column;
+    border: 1px dashed #ccc;
+
+    .bookTitle {
+      width: max-content;
+      margin: 0;
+      border: 1px dashed #ccc;
+      text-align: center;
+    }
+
+    .bookAuthor {
+      width: max-content;
+      margin: 0.5rem 0 0 0;
+      border: 1px dashed #ccc;
+      text-align: center;
+    }
+
+    .bookPrice {
+      width: max-content;
+      margin: 0.5rem 0 0 0;
+      border: 1px dashed #ccc;
+      text-align: center;
     }
   }
 }
