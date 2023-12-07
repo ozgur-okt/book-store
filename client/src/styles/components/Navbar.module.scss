@@ -9,10 +9,11 @@ $color-blue: #007bff;
   border-bottom: 1px solid #ccc;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   align-items: center;
-  transition: max-height 0.4s ease-in-out;
+  transition: max-height 0.2s ease-in-out;
 
   .logo {
     display: flex;
+    text-decoration: none;
 
     img {
       margin-left: 3rem;
