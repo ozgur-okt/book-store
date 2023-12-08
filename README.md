@@ -1,6 +1,8 @@
 # Book Store React App
 The Book Store React App is a full-stack application developed using React on the client-side and Express.js/Node.js on the server-side. It provides a straightforward interface for managing a book store, with features including book listing, detailed book information, a shopping cart, and responsive design.
 
+[screen-capture (3).webm](https://github.com/ozgur-okt/book-store/assets/73358116/3497a61e-5fa7-49f7-aa71-a373a2885f90)
+
 ## Features
 
 ### React App
