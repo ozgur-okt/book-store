@@ -10,7 +10,7 @@ const books = [
   },
   {
     id: 2,
-    title: 'To Kill a Mockingbird',
+    title: 'A Mockingbird',
     author: 'Harper Lee',
     price: 12.99,
     pageCount: 281,
@@ -32,8 +32,8 @@ const books = [
     author: 'Leo Tolstoy',
     price: 14.99,
     pageCount: 279,
-    description: 'Pride and Prejudice is a romantic novel of manners written by Jane Austen in 1813. The novel follows the character development of Elizabeth Bennet, the dynamic protagonist of the book who learns about the repercussions of hasty judgments and eventually comes to appreciate the difference between superficial goodness and actual goodness.',
-    image: 'https://source.unsplash.com/featured/?pride-prejudice',
+    description: 'War and Peace is a romantic novel of manners written by Tolstoy in 1813. The novel follows the character development of Elizabeth Bennet, the dynamic protagonist of the book who learns about the repercussions of hasty judgments and eventually comes to appreciate the difference between superficial goodness and actual goodness.',
+    image: 'https://source.unsplash.com/featured/?peace',
   },
   {
     id: 5,
@@ -73,12 +73,12 @@ const books = [
   },
   {
     id: 9,
-    title: 'Moby-Dick',
+    title: 'Moby-Captain',
     author: 'Herman Melville',
     price: 15.99,
     pageCount: 345,
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
-    image: 'https://source.unsplash.com/featured/?moby-dick',
+    image: 'https://source.unsplash.com/featured/?moby-captain',
   },
   {
     id: 10,
@@ -95,7 +95,7 @@ const books = [
     author: 'J.R.R. Tolkien',
     price: 19.99,
     pageCount: 186,
-    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?lord-of-the-rings',
   },
   {
@@ -104,7 +104,7 @@ const books = [
     author: 'Ray Bradbury',
     price: 11.99,
     pageCount: 335,
-    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?fahrenheit-451',
   },
   {
@@ -113,7 +113,7 @@ const books = [
     author: 'C.S. Lewis',
     price: 17.99,
     pageCount: 345,
-    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?narnia',
   },
   {
@@ -122,7 +122,7 @@ const books = [
     author: 'Mary Shelley',
     price: 13.99,
     pageCount: 345,
-    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?frankenstein',
   },
   {
@@ -131,7 +131,7 @@ const books = [
     author: 'Alice Walker',
     price: 14.99,
     pageCount: 562,
-    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?color-purple',
   },
   {
@@ -140,7 +140,7 @@ const books = [
     author: 'Stephen King',
     price: 16.99,
     pageCount: 562,
-    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?the-shining',
   },
   {
@@ -149,7 +149,7 @@ const books = [
     author: 'Yuval Noah Harari',
     price: 18.99,
     pageCount: 335,
-    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?sapiens',
   },
   {
@@ -158,7 +158,7 @@ const books = [
     author: 'Emily Brontë',
     price: 12.99,
     pageCount: 345,
-    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?wuthering-heights',
   },
   {
@@ -167,7 +167,7 @@ const books = [
     author: 'Paulo Coelho',
     price: 15.99,
     pageCount: 345,
-    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?alchemist',
   },
   {
@@ -176,7 +176,7 @@ const books = [
     author: 'Douglas Adams',
     price: 14.99,
     pageCount: 562,
-    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?hitchhikers-guide',
   },
   {
@@ -185,7 +185,7 @@ const books = [
     author: 'Cormac McCarthy',
     price: 14.99,
     pageCount: 562,
-    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?the-road',
   },
   {
@@ -194,7 +194,7 @@ const books = [
     author: 'Margaret Atwood',
     price: 16.99,
     pageCount: 120,
-    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?handmaids-tale',
   },
   {
@@ -203,7 +203,7 @@ const books = [
     author: 'Albert Camus',
     price: 12.99,
     pageCount: 335,
-    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?the-stranger',
   },
   {
@@ -212,7 +212,7 @@ const books = [
     author: 'John Steinbeck',
     price: 15.99,
     pageCount: 345,
-    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?grapes-of-wrath',
   },
   {
@@ -221,7 +221,7 @@ const books = [
     author: 'Alexandre Dumas',
     price: 18.99,
     pageCount: 120,
-    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?monte-cristo',
   },
   {
@@ -230,7 +230,7 @@ const books = [
     author: 'Oscar Wilde',
     price: 13.99,
     pageCount: 120,
-    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?dorian-gray',
   },
   {
@@ -239,7 +239,7 @@ const books = [
     author: 'Charles Dickens',
     price: 14.99,
     pageCount: 186,
-    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?tale-of-two-cities',
   },
   {
@@ -248,7 +248,7 @@ const books = [
     author: 'Fyodor Dostoevsky',
     price: 17.99,
     pageCount: 345,
-    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?crime-and-punishment',
   },
   {
@@ -257,7 +257,7 @@ const books = [
     author: 'Charles Dickens',
     price: 15.99,
     pageCount: 345,
-    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?great-expectations',
   },
   {
@@ -266,7 +266,7 @@ const books = [
     author: 'Alex Michaelides',
     price: 19.99,
     pageCount: 186,
-    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus unde qui beatae id quis quas omnis animi quo, repellat eius facilis tempore voluptate quod temporibus molestias ipsa itaque aut reiciendis!',
     image: 'https://source.unsplash.com/featured/?silent-patient',
   },
 ]
