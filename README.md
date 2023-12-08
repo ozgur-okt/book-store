@@ -24,6 +24,9 @@ Users can add books to the shopping cart from the book list. The cart page refle
 ### Search Bar
 Implemented search functionality enables users to locate specific books based on title or relevant information.
 
+### Form Validation
+Cart checkout form input fields are validated according to length criterias.
+
 ### Responsive Design
 The application is designed with responsiveness in mind, ensuring optimal user experience across various devices and screen sizes.
 

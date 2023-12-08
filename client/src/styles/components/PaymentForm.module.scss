@@ -4,19 +4,36 @@ $color-blue-light: #1e8fff7c;
 .paymentForm {
   display: flex;
   align-items: center;
-  
   .form {
     display: flex;
     flex-direction: column;
     padding: 0 2rem;
 
-    input {
-      margin-bottom: 10px;
-      height: 1.8rem;
-      width: 20rem;
-      border: 1px solid $color-blue-light;
-      border-radius: 2px;
-      padding: 0 0.5rem;
+    .input {
+      margin-bottom: 0.5rem;
+      height: 3rem;
+      width: 100%;
+      position: relative;
+
+      input {
+        height: 1.8rem;
+        width: 20rem;
+        border: 2px solid $color-blue-light;
+        border-radius: 2px;
+        padding: 0 0.5rem;
+      }
+
+      .inputInvalid {
+        border: 2px solid red;
+      }
+
+      .error {
+        position: absolute;
+        bottom: -3px;
+        left: 2px;
+        color: red;
+        height: 1.2rem;
+      }
     }
 
     .submit {

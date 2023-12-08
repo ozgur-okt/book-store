@@ -28,8 +28,8 @@ const books = [
   },
   {
     id: 4,
-    title: 'Pride and Prejudice',
-    author: 'Jane Austen',
+    title: 'War and Peace',
+    author: 'Leo Tolstoy',
     price: 14.99,
     pageCount: 279,
     description: 'Pride and Prejudice is a romantic novel of manners written by Jane Austen in 1813. The novel follows the character development of Elizabeth Bennet, the dynamic protagonist of the book who learns about the repercussions of hasty judgments and eventually comes to appreciate the difference between superficial goodness and actual goodness.',
