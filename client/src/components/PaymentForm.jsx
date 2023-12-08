@@ -75,7 +75,7 @@ const PaymentForm = () => {
                 value={state.number}
                 onChange={onInputChange}
                 onFocus={onInputFocus}
-                className={notValid().number && state.number.length > 0 && styles.inputInvalid}
+                className={notValid().number && state.number.length > 0 ? styles.inputInvalid : ''}
               />
               {state.number.length > 0 && notValid().number && <small className={styles.error}>Card number must be 16 digits</small>}
             </div>
@@ -87,7 +87,7 @@ const PaymentForm = () => {
                 value={state.name}
                 onChange={onInputChange}
                 onFocus={onInputFocus}
-                className={notValid().name && state.name.length > 0 && styles.inputInvalid}
+                className={notValid().name && state.name.length > 0 ? styles.inputInvalid : ''}
               />
               {state.name.length > 0 && notValid().name && <small className={styles.error}>Name must be at least 2 characters</small>}
             </div>
@@ -99,7 +99,7 @@ const PaymentForm = () => {
                 value={state.expiry}
                 onChange={onInputChange}
                 onFocus={onInputFocus}
-                className={notValid().expiry && state.expiry.length > 0 && styles.inputInvalid}
+                className={notValid().expiry && state.expiry.length > 0 ? styles.inputInvalid : ''}
               />
               {state.expiry.length > 0 && notValid().expiry && <small className={styles.error}>Expiry must be a valid date</small>}
             </div>
@@ -111,7 +111,7 @@ const PaymentForm = () => {
                 value={state.cvc}
                 onChange={onInputChange}
                 onFocus={onInputFocus}
-                className={notValid().cvc && state.cvc.length > 0 && styles.inputInvalid}
+                className={notValid().cvc && state.cvc.length > 0 ? styles.inputInvalid : ''}
               />
               {state.cvc.length > 0 && notValid().cvc && <small className={styles.error}>CVC must be 3 digits</small>}
             </div>
