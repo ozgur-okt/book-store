@@ -33,7 +33,7 @@ Utilizes a client-server architecture with the server implemented using Express.
 ### Data Storage
 Book data is stored in a server-side JavaScript file within the server folder, providing a simple, file-based data storage solution.
 
-## Getting Started
+## Run App on Local
 To run the application locally, follow these steps:
 
 Clone the repository:
@@ -57,6 +57,14 @@ In a separate terminal window, navigate to the client folder, install dependenci
 ```npm start```
 
 Open your web browser and visit http://localhost:3000 to access the Book Store React App.
+
+## Run App on Docker
+
+To run app in a Docker container, run this command at root directory.
+
+```docker compose up```
+
+Server will be running on 5000 and client on 3000 ports.
 
 ## Contribution
 
